@@ -37,8 +37,8 @@ The notebook explores two fundamental approaches in modern NLP:
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/your-username/your-repository-name.git
-    cd your-repository-name
+    git clone https://github.com/orangegreen212/Sentiment-Analysis-LTSM-and-BERT-Model.git
+    cd Sentiment-Analysis-LTSM-and-BERT-Model
     ```
 
 2.  **Create a virtual environment (recommended):**
@@ -65,7 +65,7 @@ The main logic is contained within the `Sentiment analysis.ipynb` notebook. Open
 
 ## 📈 Project Workflow
 
-1.  **Data Loading & Cleaning**: The initial dataset is loaded, and text is cleaned of artifacts like HTML tags.
+1.  **Data Loading & Cleaning**: The initial dataset is loaded, and text is cleaned of artifacts like HTML tags, stopwords etc.
 2.  **Feature Engineering**: Text is tokenized and lemmatized. A vocabulary is built, and sentences are converted to sequences of integer indices.
 3.  **Model Training (LSTM)**:
     -   An LSTM model is defined and trained on the vectorized data.
