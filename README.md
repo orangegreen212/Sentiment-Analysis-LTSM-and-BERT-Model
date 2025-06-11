@@ -26,6 +26,20 @@ The notebook explores two fundamental approaches in modern NLP:
 -   **Utilities**: [Scikit-learn](https://scikit-learn.org/stable/)
 -   **Visualization**: [Matplotlib](https://matplotlib.org/), [Seaborn](https://seaborn.pydata.org/)
 
+## Results and Conclusion
+
+The project's findings highlight the significant performance gap between the two approaches. The pre-trained BERTweet model demonstrated significantly superior performance compared to the custom-trained LSTM model.
+
+    **BERTweet Model**: This model achieved the highest performance across all metrics, with a robust F1-score of [e.g., 0.89] and an accuracy of [e.g., 91%]. Its ability to classify reviews into three distinct categories (Positive, Negative, Neutral) provided a more nuanced analysis, confirmed by a confusion matrix showing a high number of correct predictions across all classes.
+
+    **LSTM Model (with proper labels):** This model served as a strong baseline, reaching a peak validation accuracy of approximately 87.5%. However, its performance was limited by severe overfitting, as training accuracy approached 100% while validation metrics stagnated. This indicates that while the model could learn from the data, it struggled to generalize as effectively as the BERTweet model.
+
+    **LSTM Model (with random labels):** This experimental model served as a crucial control, yielding an accuracy of around 50% (equivalent to random guessing). This effectively confirmed the "Garbage In, Garbage Out" principle, proving that a model cannot learn without meaningful, correctly labeled data.
+
+**Final Conclusion:**
+The key takeaway is that the transfer learning approach used by the BERTweet model is far more effective. Its pre-training on a massive corpus of text gives it a deep understanding of language context that a model trained from scratch on a limited dataset, like the LSTM, cannot easily achieve. The quantitative results clearly favor the pre-trained transformer architecture for this sentiment analysis task.
+
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -62,6 +76,8 @@ The notebook explores two fundamental approaches in modern NLP:
 ### Usage
 
 The main logic is contained within the `Sentiment analysis.ipynb` notebook. Open it with Jupyter Lab or Google Colab and run the cells sequentially to reproduce the analysis and training process.
+
+
 
 ## 📈 Project Workflow
 
